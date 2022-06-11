@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  // border: 3px solid red;
+  overflow: scroll;
+  overflow-x: hidden;
+  min-height: calc(100vh - 70px);
+  // margin-top: 70px;
+  width: 100%;
+  // border: 2px solid red;
+  color: var(--dark);
+  background-color: var(--white);
+  .miniNavbarSection {
+    min-height: 60px;
+    width: 100%;
+    // border: 2px solid red;
+  }
+  .videoSection {
+    min-height: 200px;
+    width: 100%;
+    // border: 2px solid red;
+  }
+  .guideSection {
+    min-height: 200px;
+    width: 100%;
+    // border: 2px solid red;
+  }
+  .contractSection {
+    min-height: 200px;
+    width: 100%;
+    // border: 2px solid red;
+  }
+  .footerSection {
+    min-height: 400px;
+    width: 100%;
+    // border: 2px solid red;
+  }
+}
+
+.darkMode {
+  background-color: var(--footerColorDark);
+  color: var(--white);
+}

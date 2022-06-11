@@ -1,0 +1,298 @@
+.container {
+  // border: 3px solid red;
+  width: 100%;
+  position: relative;
+  color: var(--dark);
+  min-height: 70px;
+  // border: 2px solid blue;
+  .navbarContainer {
+    box-shadow: 1px -4px 5px 3px rgba(122, 107, 107, 1);
+    -webkit-box-shadow: 1px -4px 5px 3px rgba(122, 107, 107, 1);
+    -moz-box-shadow: 1px -4px 5px 3px rgba(122, 107, 107, 1);
+    background-color: var(--white);
+    height: 70px;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    // border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navbarContent {
+      width: 98%;
+      height: 100%;
+      // border: 3px solid blue;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logoContainer {
+        width: 130px;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        // border: 3px solid blue;
+        .LogoItem {
+          // border: 3px solid red;
+          background-image: url("../../assets/binanceLogo.png");
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .linkContainer {
+        height: 70%;
+        width: 450px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // border: 3px solid purple;
+        .lisItem {
+          display: flex;
+
+          align-items: center;
+          height: 100%;
+          // border: 2px solid red;
+          width: 95%;
+          ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            li {
+              font-size: 14px;
+              // border: 1px solid blue;
+              margin-left: 20px;
+              font-weight: bolder;
+              cursor: pointer;
+              &:hover {
+                color: var(--yellow);
+                font-weight: bolder;
+              }
+            }
+          }
+        }
+        .iconContainer {
+          height: 100%;
+          width: 10%;
+          // border: 2px solid red;
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+
+          // justify-content: space-between;
+          .toggleParent {
+            cursor: pointer;
+            &:hover {
+              color: var(--yellow);
+              font-weight: bolder;
+            }
+          }
+          .hamburgerParent {
+            cursor: pointer;
+            font-size: 30px;
+            display: none;
+            &:hover {
+              color: var(--yellow);
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+    }
+  }
+  .verticalBarContainer {
+    background-color: var(--white);
+    // display: none;
+    position: fixed;
+    height: 100vh;
+    // border: 2px solid var(--dark);
+    width: 375px;
+    z-index: 5;
+    right: 0;
+    transition: 0.5s ease-in-out;
+    .contentContainer {
+      // border: 3px solid red;
+      // background-color: var(--white);
+      color: var(--dark);
+      width: 100%;
+      height: 100%;
+      .NavIconContainer {
+        height: 70px;
+        width: 100%;
+        // border: 2px solid blue;
+        display: flex;
+        align-items: center;
+      }
+      .NavIconContentDiv {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        // border: 2px solid var(--yellow);
+        font-size: 35px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // border: 3px solid purple;
+        font-weight: bolder;
+      }
+      .verticalContent {
+        .navLinks {
+          ul {
+            list-style: none;
+            li {
+              height: 45px;
+              text-align: center;
+              font-weight: bolder;
+
+              button {
+                font-family: Montserrat;
+                height: 40px;
+                width: 95%;
+                background-color: var(--yellow);
+                color: var(--dark);
+                font-size: 16px;
+                font-weight: bolder;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+              }
+              &:nth-child(1) {
+                display: block;
+                line-height: 2;
+              }
+            }
+          }
+        }
+        .themeContainer {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .themeContent {
+            width: 95%;
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-between;
+            align-items: center;
+            height: 45px;
+            // border: 2px solid blue;
+            .logoContent {
+              width: 20%;
+              height: 70%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .logoItem {
+                padding-right: 10px;
+                // border: 1px solid red;
+                background-image: url("../../assets/favicon.ico");
+                width: 50%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+              }
+              .logoText {
+                width: 50%;
+                color: #1e2328;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // hide vertical bar
+  .active {
+    right: -375px;
+  }
+}
+.darkMode {
+  background-color: var(--dark) !important;
+  color: var(--white);
+}
+
+.darkMode2 {
+  background-color: var(--verticalBackgroundColor);
+  color: var(--white) !important;
+}
+
+@media screen and (min-width: 950px) {
+  .lisItem {
+    ul {
+      display: flex;
+    }
+  }
+  .verticalBarContainer {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container {
+    .navbarContainer {
+      // border: 3px solid blue;
+      .navbarContent {
+        .linkContainer {
+          .lisItem {
+            ul {
+              display: none;
+            }
+          }
+          .iconContainer {
+            .toggleParent {
+              display: none;
+              // border: 3px solid blue;
+            }
+            .hamburgerParent {
+              // border: 3px solid blue;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 520px) {
+  .container {
+    .navbarContainer {
+      // border: 3px solid blue;
+      .navbarContent {
+        .linkContainer {
+          .lisItem {
+            ul {
+              display: none;
+            }
+          }
+          .iconContainer {
+            .toggleParent {
+              display: none;
+              // border: 3px solid blue;
+            }
+            .hamburgerParent {
+              // border: 3px solid blue;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .verticalBarContainer {
+      width: 100%;
+      // border: 3px solid red;
+      .themeContainer {
+        .themeContent {
+          .logoContent {
+            .logoText {
+              // border: 3px solid red;
+            }
+          }
+        }
+      }
+    }
+    .active {
+      right: -100%;
+    }
+  }
+}

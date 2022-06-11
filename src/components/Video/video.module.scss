@@ -1,0 +1,128 @@
+.ParentDiv {
+  width: 100%;
+  color: var(--dark);
+  font-weight: bolder;
+  .container {
+    min-height: 60px;
+    // border: 3px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    .videoContent {
+      padding: 30px 25px;
+      width: 80%;
+      //   border: 2px solid red;
+      .textContainer {
+        width: 100%;
+        min-height: 60px;
+        // border: 2px solid blue;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--white);
+        .text {
+          padding-bottom: 20px;
+          h2 {
+            font-size: 18px;
+          }
+        }
+        .logo {
+          // border: 2px solid red;
+
+          display: flex;
+          align-items: center;
+          width: 200px;
+          height: 100%;
+          .logoContent {
+            margin-right: 20px;
+            // border: 2px solid blue;
+            width: 20%;
+            height: 100%;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+          .logoText {
+            color: var(--yellow);
+            span {
+              display: block;
+              font-size: 12px;
+              color: var(--dark);
+            }
+            .spanDarkMode {
+              color: var(--white);
+            }
+          }
+        }
+      }
+      .videoContainer {
+        width: 100%;
+        // border: 3px solid blue;
+        padding: 20px 0;
+        video {
+          width: 100%;
+        }
+      }
+      display: grid;
+      place-items: center;
+    }
+  }
+}
+
+.darkMode {
+  background-color: var(--dark);
+}
+
+@media screen and (max-width: 1100px) {
+  .ParentDiv {
+    .container {
+      .videoContent {
+        .videoContainer {
+          padding-top: 20px;
+          video {
+            // border: 3px solid blue;
+            width: 100%;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ParentDiv {
+    .container {
+      .videoContent {
+        .videoContainer {
+          padding: 0 0;
+          video {
+            // border: 3px solid blue;
+            width: 100%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ParentDiv {
+    .container {
+      .videoContent {
+        width: 95%;
+        .videoContainer {
+          width: 100%;
+          padding: 0 0;
+          video {
+            // border: 3px solid blue;
+            width: 100%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}

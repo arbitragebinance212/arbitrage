@@ -1,0 +1,109 @@
+.ParentDiv {
+  width: 100%;
+  color: var(--dark);
+  min-height: 60px;
+  // border: 3px solid red;
+  .container {
+    // border: 2px solid red;
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contractContent {
+      width: 80%;
+      //   border: 3px solid red;
+      padding: 10px 25px;
+      .ethContract,
+      .btcContract {
+        h3 {
+          padding-bottom: 25px;
+        }
+        h4 {
+          padding-bottom: 25px;
+        }
+        nav {
+          //   border: 3px solid red;
+          li {
+            padding-left: 30px;
+            padding-bottom: 10px;
+          }
+        }
+        .addressModal {
+          cursor: pointer;
+          padding: 20px 0 40px 0px;
+          //   border: 3px solid red;
+          color: var(--yellow);
+          text-decoration: underline;
+          font-weight: bolder;
+        }
+      }
+      .warning {
+        border-bottom: #980a0a;
+        // border: 3px solid red;
+        h4 {
+          padding-bottom: 20px;
+        }
+        nav {
+          li {
+            // border: 3px solid red;
+            margin-left: 15px;
+            padding-bottom: 10px;
+          }
+        }
+        .risk {
+          font-size: 14px;
+          span {
+            font-weight: bolder;
+            font-size: 16px;
+          }
+          nav {
+            ul {
+              li {
+                list-style: none;
+                padding: 20px 0;
+                margin: 0;
+                font-size: 16px;
+                font-weight: bolder;
+              }
+            }
+          }
+        }
+      }
+      .request {
+        min-height: 50px;
+        // border: 3px solid red;
+        padding: 30px 0;
+        span {
+          a {
+            color: var(--yellow);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.darkMode {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+  .ParentDiv {
+    .container {
+      .contractContent {
+        width: 95%;
+
+        .ethContract,
+        .btcContract,
+        .warning,
+        .request {
+          //   border: 2px solid red;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

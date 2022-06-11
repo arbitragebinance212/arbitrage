@@ -1,0 +1,386 @@
+.parentContainer {
+  color: var(--dark);
+  background-color: rgba(255, 255, 255, 0.635);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  overflow-y: scroll;
+  //   border: 3px solid red;
+  .contentContainer {
+    position: relative;
+    // border: 2px solid red;
+    height: 100%;
+    width: 70%;
+    z-index: 3;
+    box-shadow: 0.5px 1px 10px #d0cfcf;
+    background-color: var(--white);
+    .navbar {
+      background-color: var(--dark);
+      color: var(--white);
+      height: 60px;
+      //   border: 3px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .navbarContent {
+        // border: 2px solid red;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        .navLogo {
+          width: 70%;
+          height: 100%;
+          //   border: 2px solid blue;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .navLogoContent {
+            width: 10%;
+            height: 100%;
+            object-fit: cover;
+            // border: 2px solid red;
+            justify-content: flex-start;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          span {
+            width: 85%;
+            color: var(--yellow);
+          }
+        }
+        .navClose {
+          color: var(--white);
+          font-size: 35px;
+        }
+      }
+    }
+    .displayBanner {
+      width: 100%;
+      height: 500px;
+      //   border: 2px solid red;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .paymentSection {
+      width: 100%;
+      //   border: 2px solid red;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .paymentSectionContent {
+        width: 80%;
+
+        min-height: 60px;
+        display: flex;
+        justify-content: center;
+        form {
+          width: 80%;
+          // border: 2px solid purple;
+          span {
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            font-size: 14px;
+          }
+          .formGroup {
+            // border: 2px solid blue;
+            width: 100%;
+            min-height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+              min-height: inherit;
+              width: 90%;
+              font-family: roboto;
+              text-align: center;
+              font-weight: bolder;
+              font-size: 20px;
+            }
+            button {
+              width: 10%;
+              min-height: inherit;
+              font-family: roboto;
+              background-color: var(--yellow);
+              border: none;
+              cursor: pointer;
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+    }
+    .qrCodeSection {
+      width: 100%;
+      height: 600px;
+      //   border: 3px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .qrCodeContent {
+        width: 50%;
+        height: 80%;
+        // border: 3px solid blue;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .loadingSection {
+      width: 100%;
+      height: 200px;
+      //   border: 3px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .loadingContent {
+        position: relative;
+        width: 80%;
+        height: 80%;
+        // border: 3px solid blue;
+        position: relative;
+        span {
+          display: block;
+          text-align: center;
+          //   border: 2px solid purple;
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .instructionSection {
+      margin-top: 80px;
+      width: 100%;
+      min-height: 200px;
+      //   border: 3px solid red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .instructionContent {
+        width: 80%;
+        //   border: 3px solid blue;
+        h3 {
+          padding-bottom: 20px;
+        }
+        ul {
+          li {
+            margin-left: 40px;
+          }
+          padding-bottom: 20px;
+        }
+        div {
+          span {
+            display: block;
+            font-weight: bolder;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .footerSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      //   border: 2px solid red;
+      background-color: var(--dark);
+      color: var(--yellow);
+      font-weight: bolder;
+      height: 50px;
+      div {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .parentContainer {
+    .contentContainer {
+      width: 80%;
+      .paymentSection {
+        .paymentSectionContent {
+          width: 95%;
+          //   border: 2px solid red;
+          form {
+            width: 85%;
+            .formGroup {
+              input {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+      .qrCodeSection {
+        // border: 2px solid red;
+        height: 550px;
+        .qrCodeContent {
+          width: 65%;
+        }
+      }
+      .loadingSection {
+        width: 100%;
+        // border: 3px solid red;
+        .loadingContent {
+          width: 100%;
+          //   border: 3px solid red;
+          span {
+            width: 100%;
+            font-size: 16px;
+          }
+        }
+      }
+      .instructionSection {
+        .instructionContent {
+          width: 95%;
+          font-size: 16px;
+        }
+      }
+      .footerSection {
+        div {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .parentContainer {
+    .contentContainer {
+      width: 95%;
+      .displayBanner {
+        // width: 100%;
+        height: 500px;
+        // border: 3px solid red;
+      }
+      .paymentSection {
+        .paymentSectionContent {
+          width: 95%;
+          //   border: 2px solid red;
+          form {
+            width: 100%;
+            .formGroup {
+              input {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .qrCodeSection {
+        // border: 2px solid red;
+        height: 550px;
+        .qrCodeContent {
+          width: 65%;
+        }
+      }
+      .loadingSection {
+        width: 100%;
+        // border: 3px solid red;
+        .loadingContent {
+          width: 100%;
+          //   border: 3px solid red;
+          span {
+            width: 100%;
+            font-size: 15px;
+          }
+        }
+      }
+      .instructionSection {
+        .instructionContent {
+          width: 95%;
+          font-size: 15px;
+        }
+      }
+      .footerSection {
+        div {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .parentContainer {
+    .contentContainer {
+      width: 95%;
+      .navbar {
+        font-size: 12px;
+      }
+      .displayBanner {
+        // width: 100%;
+        height: 300px;
+        // border: 3px solid red;
+      }
+      .paymentSection {
+        .paymentSectionContent {
+          width: 95%;
+          //   border: 2px solid red;
+          form {
+            width: 100%;
+            .formGroup {
+              input {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .qrCodeSection {
+        // border: 2px solid red;
+        height: 420px;
+        .qrCodeContent {
+          width: 65%;
+        }
+      }
+      .loadingSection {
+        width: 100%;
+        // border: 3px solid red;
+        .loadingContent {
+          width: 100%;
+          //   border: 3px solid red;
+          span {
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+      .instructionSection {
+        .instructionContent {
+          width: 95%;
+          font-size: 14px;
+        }
+      }
+      .footerSection {
+        div {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

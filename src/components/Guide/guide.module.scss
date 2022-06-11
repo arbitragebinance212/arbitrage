@@ -1,0 +1,69 @@
+.ParentDiv {
+  width: 100%;
+  color: var(--dark);
+  min-height: 60px;
+  // border: 3px solid red;
+  .container {
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .guideContent {
+      //   border: 3px solid red;
+      padding: 10px 25px;
+      width: 80%;
+
+      div {
+        padding-bottom: 20px;
+        font-size: 18px;
+
+        a {
+          color: var(--yellow);
+          text-decoration: none;
+          padding: 0 3px;
+          cursor: pointer;
+        }
+        &:nth-child(1) {
+          .header {
+            font-weight: bolder;
+          }
+          //   border: 3px solid red;
+          font-size: 25px;
+          //   font-weight: bolder;
+          padding-bottom: 30px;
+        }
+        &:nth-child(7) {
+          //   border: 3px solid red;
+          .navUl {
+            // border: 3px solid red;
+            padding-left: 50px;
+            padding-top: 20px;
+            li {
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.darkMode {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+  .ParentDiv {
+    .container {
+      .guideContent {
+        width: 95%;
+        div {
+          font-size: 14px;
+        //   border: 3px solid red;
+        }
+      }
+    }
+  }
+}
